@@ -16,6 +16,9 @@
       Калькулятор ожидания дня рождения
     </div>
     <div class="card-body">
+      <p class="text-muted small mb-3">
+      При «Отправить»: если имя как у участника Beatles — уйдёт письмо админу, запись не сохранится.
+      </p>
       <form method="post">
         {% csrf_token %}
         {% if not "/delete/" in request.path %}

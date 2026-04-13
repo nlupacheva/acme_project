@@ -8,6 +8,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Подключаем бэкенд filebased.EmailBackend:
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+# Каждое письмо — отдельный файл с расширением .log (открыть текстовым редактором).
+# Каталог рядом с manage.py: <проект>/sent_emails/
+EMAIL_FILE_PATH = BASE_DIR / 'sent_emails' 
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
