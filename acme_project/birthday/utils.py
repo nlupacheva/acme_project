@@ -1,6 +1,7 @@
-# birthday/utils.py 
-# Импортируем модуль для работы с датами.
+"""Утилиты для расчёта «дней до дня рождения» (используется datetime.date)."""
+
 from datetime import date
+
 
 def calculate_birthday_countdown(birthday):
     """
@@ -25,6 +26,7 @@ def calculate_birthday_countdown(birthday):
     # Считаем разницу между следующим днём рождения и сегодняшним днём в днях.
     birthday_countdown = (next_birthday - today).days
     return birthday_countdown
+
 
 def get_birthday_for_year(birthday, year):
     """
